@@ -1,0 +1,278 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="test" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:gga="clr-namespace:GemEcosystem.GemSURF.Activities;assembly=GemEcosystem.GemSURF.Activities" xmlns:ggm="clr-namespace:GemEcosystem.GemSURF.Models;assembly=GemEcosystem.GemSURF" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uisape="clr-namespace:UiPath.IntelligentOCR.StudioWeb.Activities.PDF.ExtractPDFText;assembly=UiPath.IntelligentOCR.StudioWeb.Activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="SelectorMap" Type="InOutArgument(ggm:SelectorMap)" />
+    <x:Property Name="TestData" Type="InOutArgument(ggm:TestData)" />
+    <x:Property Name="GlobalConf" Type="InOutArgument(ggm:GlobalConfig)" />
+    <x:Property Name="BreakTriggerScopeInArgument" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>582,2432</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>test_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Word.Activities</x:String>
+      <x:String>UiPath.Word</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>GemEcosystem.GemSURF.Models</x:String>
+      <x:String>GemEcosystem.GemSURF.Enums</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>GemEcosystem.GemSURF.Activities</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.PDF.ExtractPDFText</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.PDF</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentUnderstanding.ML.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>GemEcosystem.GemSURF.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR.StudioWeb.Activities</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>GemEcosystem.GemSURF</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Collections.Specialized</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="test" sap:VirtualizedContainerService.HintSize="592,2367" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="filePath" />
+      <Variable x:TypeArguments="x:String" Name="fileKaRasta" />
+      <Variable x:TypeArguments="s:String[]" Name="fileFolder" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <gga:InitialiseTest ConfigFile="{x:Null}" ContinueOnError="False" DisplayName="Initialise Test" GlobalConfigs="[GlobalConf]" sap:VirtualizedContainerService.HintSize="530,133" sap2010:WorkflowViewState.IdRef="InitialiseTest_1" SelectorMap="[SelectorMap]" TestCaseName="Comparision" TestData="[TestData]" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: PDF Editor – Edit Your PDF Online for Free" sap:VirtualizedContainerService.HintSize="530,2083" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="a7280d55-0e80-4f5c-b8d3-24390be6f8a1" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,1866" sap2010:WorkflowViewState.IdRef="Sequence_8">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="s:String[]" Name="fileName" />
+              <Variable x:TypeArguments="x:String" Name="extractedString" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <TryCatch.Try>
+                <Sequence sap:VirtualizedContainerService.HintSize="450,493" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Add file'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a7280d55-0e80-4f5c-b8d3-24390be6f8a1" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://pdfcandy.com/edit-pdf.html" CvElementArea="490, 366, 384, 76" CvTextArea="576, 390, 143, 28" CvTextArgument="+ ADD FILE" CvType="Button" DesignTimeRectangle="494, 368, 304, 72" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Add file'" FullSelectorArgument="&lt;webctrl aaname=' Add file ' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' Add file ' tag='A' type='' class='btn btn-add-local addbutton' check:innerText='ADD FILE' /&gt;" Guid="4743ae38-18a7-4c2b-987f-18ec1d52fcf5" ImageBase64="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" InformativeScreenshot="e97e42219bb8642b6362fedd9cf820f6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='PDF Editor – Edit Your PDF Online for Free' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <gga:LogStatus ContinueOnError="False" DisplayName="Log Status" GlobalConfigs="[GlobalConf]" sap:VirtualizedContainerService.HintSize="388,181" sap2010:WorkflowViewState.IdRef="LogStatus_1" ScreenShot="Yes" TestStep="Click on Upload PDF file" TestStepDesciption="Successfully clicked on Upload PDF file" TestStepStatus="PASS" />
+                </Sequence>
+              </TryCatch.Try>
+              <TryCatch.Catches>
+                <Catch x:TypeArguments="s:NullReferenceException" sap:VirtualizedContainerService.HintSize="454,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ActivityAction x:TypeArguments="s:NullReferenceException">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="s:NullReferenceException" Name="exception" />
+                    </ActivityAction.Argument>
+                    <gga:LogStatus ContinueOnError="False" DisplayName="Log Status" GlobalConfigs="[GlobalConf]" sap:VirtualizedContainerService.HintSize="334,181" sap2010:WorkflowViewState.IdRef="LogStatus_2" ScreenShot="Yes" TestStep="Click on Upload PDF file" TestStepDesciption="Unable to click on Upload button" TestStepStatus="PASS" />
+                  </ActivityAction>
+                </Catch>
+              </TryCatch.Catches>
+            </TryCatch>
+            <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="Delay_1" />
+            <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_2">
+              <Assign.To>
+                <OutArgument x:TypeArguments="s:String[]">[fileName]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="s:String[]">[Directory.GetFiles("C:\Users\himanshu.panchal\Downloads\SamplePDF\")]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[fileName]">
+              <ui:ForEach.Body>
+                <ActivityAction x:TypeArguments="x:String">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:String" Name="currentItem" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,698" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="334,90" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Edit'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="HardwareEvents" ScopeIdentifier="a7280d55-0e80-4f5c-b8d3-24390be6f8a1" Text="[currentItem]" Version="V3">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="201, 410, 237, 15" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'Edit'" FullSelectorArgument="&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;" Guid="4f01cbe8-b6bc-4a1c-baad-027f2876408c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAPEAAAATCAYAAABBR+uAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVHhe7dNBDQAwEASh8296+6uHScADNyBNYoj7ie98hiKJIU5iiJMY4iSGOIkhTmKIkxjiJIY4iSFOYoiTGOIkhjiJIU5iiDMX4iSGtO0BZeAby95jgTsAAAAASUVORK5CYII=" InformativeScreenshot="26f24ae881bfa311fc208b777e68a621.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Open' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive" />
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a7280d55-0e80-4f5c-b8d3-24390be6f8a1" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable CvElementArea="470, 434, 87, 25" CvTextArea="498, 440, 30, 15" CvTextArgument="Open" CvType="Button" DesignTimeRectangle="470, 434, 88, 26" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Open' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Open' check:text='unchecked' /&gt;" Guid="a8c670ba-2bb2-443d-a46c-4547056e4745" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFwAAAAeCAYAAAChf3k/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEzSURBVGhD7ZbBEYQgDEXpiW6oZG+0QitUsWc7sIOsKChB3HFGN8LOP7xDMHB4gT+qcRwJyAHhwkC4MEy4er3BD2COWVFpBtdhjlkRG4ZhADcA4cJAuDAQLgyEC9OucGdIKbWira/3dUabwmfZmqxPa56s/g/pDQpf5BpXrHtLWhly+VqHtCf8UGwYRLr1jkx4AS70ViJnPiPFUTor7rFbVD3xYtoUri353bf85gd5k7TUNwsuhpHiaIqnRWzcY9y6vg1DjjaFn73ha8YP5EwcBrvdkVlyuWd/hgTtCT+V4aWsbM/hwCD8mN1zD3LyzC3q3TBq+Qzh3yn+w/mNX2QZo+vfy1hBpFzlGVl3AOHCQLgwnQrvFwgXBsKFOS0c3AtzzIpKM7gOc5wX4PdAuDAQLspIHzXPr3L4gVkTAAAAAElFTkSuQmCC" InformativeScreenshot="c50a397f30c3ee9cde3333981c7f0cd1.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Open' /&gt;" SearchSteps="Selector, FuzzySelector, Image, CV" Version="V2" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <ui:Break sap:VirtualizedContainerService.HintSize="334,25" sap2010:WorkflowViewState.IdRef="Break_1" />
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEach.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ForEach>
+            <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="Delay_3" />
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Due to'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,218" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="a7280d55-0e80-4f5c-b8d3-24390be6f8a1" Text="This first line is changed" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://pdfcandy.com/edit-pdf.html" CvTextArgument="Due to wanting to live closer to the city centre, I moved from my" CvType="Text" DesignTimeRectangle="640, 306, 433, 17" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Due to'" FullSelectorArgument="&lt;webctrl aria-role='presentation' idx='3' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' type='' tag='SPAN' class='' aaname='Due to wanting to live closer to the city centre, I moved from my' check:innerText='Due to wanting to live closer to the city centre, I moved from my' /&gt;" Guid="1e087325-43a6-4f78-bef9-85cf49fb1300" ImageBase64="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" InformativeScreenshot="fb7e174c3f3689e4f4d632891ac6ab63.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='PDF Editor – Edit Your PDF Online for Free' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Export File'" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a7280d55-0e80-4f5c-b8d3-24390be6f8a1" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://pdfcandy.com/edit-pdf.html" CvElementArea="1204, 98, 155, 45" CvTextArea="1261, 114, 74, 16" CvTextArgument="Export File" CvType="Button" DesignTimeRectangle="1204, 99, 154, 44" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Export File'" Guid="878fed8d-d5fe-4e92-9323-a91b107c56e0" InformativeScreenshot="ada3beb7dfb3a2c0d799fa12c0243c33.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='PDF Editor – Edit Your PDF Online for Free' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <Delay Duration="00:00:15" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="Delay_4" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Download file'" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a7280d55-0e80-4f5c-b8d3-24390be6f8a1" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://pdfcandy.com/result/a893187b27f94a5f.html" CvElementArea="217, 313, 502, 76" CvTextArea="376, 340, 168, 23" CvTextArgument="Download file" CvType="Button" DesignTimeRectangle="216, 313, 510, 77" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Download file'" Guid="150cb015-2e72-4e93-acb3-b621d63d518f" InformativeScreenshot="b94051050b75e531b68acf55562850ee.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='PDF Editor: Download processed file(s)' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="Delay_5" />
+            <uisape:ExtractPDFText ApplyOcr="{x:Null}" FilePassword="{x:Null}" OcrEngine="{x:Null}" DisplayName="Extract PDF Text" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="ExtractPDFText_1" PdfFile="[LocalResource.FromPath(&quot;C:\\Users\\himanshu.panchal\\Downloads\\Resource_edited.pdf&quot;)]" Text="[extractedString]" />
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,143" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[extractedString]" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1382, 744" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="0200b26e46fddb12c4f7c1909f81f25f.jpg" Selector="&lt;html app='chrome.exe' title='PDF Editor – Edit Your PDF Online for Free' /&gt;" Title="PDF Editor – Edit Your PDF Online for Free" Url="https://pdfcandy.com/edit-pdf.html" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

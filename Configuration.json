@@ -1,0 +1,17 @@
+﻿
+{  "ProjectEnv": "dev",
+	"ProjectName": "PDF comparision",
+	"Environ": {  
+		"dev": {   
+			"SelectorFile": [ "Selector.json" ],  
+			"TestDataFile": [ "TestData.json" ], 
+			"TestCaseFile": [ "TestList.json"], 
+			"ReportType": "PDF Comparision",     
+			"OutputPath": ".//" ,
+			"jewelUsername":"himu_1808",
+		"jewelBridgeToken":"ef678132-7523-4dd8-a001-d9875293fdb71691578144172",
+			"emailReportFlag":"Y",
+			"emailTo":"himanshu.panchal@geminisolutions.com",
+		}   
+}
+}

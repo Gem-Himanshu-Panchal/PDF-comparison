@@ -1,0 +1,64 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Comparision.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "fileFolder&Sequence_3",
+        "nextFilePath&Sequence_3",
+        "filePath&Sequence_3",
+        "extractedString&Sequence_3",
+        "folderName&Sequence_1",
+        "fileName&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "SelectorMap",
+        "TestData",
+        "GlobalConf"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "TestList&Sequence_2",
+        "Globalconf&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Sequence.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "testStr&Sequence_1",
+        "stringList2&Sequence_1",
+        "num&Sequence_1",
+        "iterator&Sequence_1",
+        "strSplit&Sequence_1",
+        "flag&Sequence_1",
+        "stringList&Sequence_1",
+        "pdf2&Sequence_1",
+        "pdf1&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "TestData",
+        "GlobalConf",
+        "SelectorMap"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}
